@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title> Id OVER Class </title>
+<link rel="stylesheet" href="10idoverclass.css" type="text/css">
+<script>
+function changeColortoBlue() {
+	document.getElementById("change").style.backgroundColor="lightblue";
+}
+
+function changeColortoYellow() {
+	document.getElementById("change").style.backgroundColor="yellow";
+}
+
+</script>
+</head>
+<body>
+
+<button class="btn" id="blue" onclick="changeColortoBlue()"> Blue </button>
+	&nbsp;&nbsp;	
+<button class="btn" id="yellow" onclick="changeColortoYellow()">  Yellow </button>
+
+<br><br>
+
+<div class="color" id="change">
+If you click on the above button then you can change the color from Black to Blue.
+</div>
+<br>
+
+
+<br>
+<div style="text-align:center;">
+<a href="5html_links.html" target="myframe">W3Schools.com</a>
+</div>
+<br><br>
+<iframe src="7image_maps.html" name="myframe" title="Image Maps inside Frame" 
+style="width:1200px;height:500px"></iframe>
+<br>
+<!-- 
+<button class="btn" onclick="window.location.href='5html_links.html';" target="myframe" >Click to See Magic</button>
+
+-->
+<br>
+
+</body>
+</html>

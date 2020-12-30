@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>
+HTML links learning stage
+</title>
+<link rel="stylesheet" type="text/css" href="8image_maps_Css.css" >
+<script> 
+	function myfunction(){
+	alert("You clicked on Coffee");
+	}
+	
+	function hideList(){
+	var x=document.getElementsByClassName("hide");
+	for(i=0;i<x.length;i++){
+	x[i].style.display="none";
+	}
+	
+	function showList(){
+	var x=style.getPropertyValue("none");
+	for(i=0;i<x.length;i++){
+	x[i].style.display="initial";
+	}
+	}
+	}
+</script>
+</head>
+<body>
+
+<h3> Table </h3>
+
+<br>
+<table>
+<caption> <b>Learning HTML</b> </caption>
+<tr id="background">
+	<th>Company</th>
+	<th>Country</th>
+	<th>Contact</th>
+</tr>
+<tr>
+	<td rowspan="2">Alfreds Futterkiste</td>
+	<td>Maria Anders</td>
+	<td>Germany</td>
+</tr>	
+<tr>
+	
+	<td>Francisco Chang</td>
+	<td>Mexico</td>
+</tr>	
+<tr>
+	<td rowspan"2" >Ernst Handel</td>
+	<td colspan="2" >Roland Mendel & Austria</td>
+	
+</tr>	
+<tr>
+	<td>Island Trading</td>
+	<td>Helen Bennett</td>
+	<td>UK</td>
+</tr>	
+</table>
+<br><br>
+<button onclick="hideList()" style="width:150px;height:50px;font-size:15px;"> Click Me to Hide List</button> 
+&nbsp;&nbsp;
+<button onclick="showList()" style="width:150px;height:50px;font-size:15px;"> Click Me to Show List</button>
+
+<br><br>
+<h3 class="hide" > List </h3>
+<h5 class="hide"> Un-Ordered List </h5>
+
+<ul class="hide" style="list-style-type:circle;">
+<li>First Elements</li>
+<li>Second Elements</li>
+<li style="list-style-type:square;" >Third Elements</li>
+<li>Fourth Elements</li>
+<li style="list-style-type:none;">Fifth Elements</li>
+<li>Sixth Elements</li>	
+</ul>
+
+<h5 class="hide"> Ordered List </h5>
+
+<ol class="hide">
+<li>First Elements</li>
+<li>Second Elements</li>
+<li style="list-style-type:square;" >Third Elements</li>
+<li>Fourth Elements</li>
+<li>Fifth Elements</li>
+<li>Sixth Elements</li>
+</ol>
+
+<h3 class="hide"> List inside an List </h3>
+
+<ol class="hide">
+<li> First Element </li>
+<li> Second Element </li>
+	<ul style="list-style-type:square;">
+	<li>1A element</li>
+	<li>1B element</li>
+	<li>1C element</li>
+	<a href="google.com" >Click to Google</a><br>
+	<img src="files/download.jpeg" alt="coffee coding" height="200px" width="350px">
+	</ul>
+<li> Third Element </li>
+<li> Fourth Element </li>
+<li> Fifth Element </li>
+</ol>
+
+<h5 class="hide">Horizontal list using float:left</h5>
+<ol class="hide" style="list-style-type:none;">
+<li class="li"> Third Element </li>
+<li class="li"> Fourth Element </li>
+<li class="li"> Fifth Element </li>
+</ol>
+
+<br>
+<br><br>
+
+<img src="files/coffe_with_code.jpg" alt="Code with Coffee" 
+style="width:900px;height:560px" usemap="#mymap" >
+
+
+ 
+<map name="mymap">
+<area shape="poly" coords="7,16,500,3,539,422,700,696,5,895" alt="Computer"  
+href="https://www.google.com/search?q=what+is+a+computer&oq=what+is+a+computer&aqs=chrome..69i57.3144j0j7&sourceid=chrome&ie=UTF-8">
+
+</map>
+<!--
+<map name="mymap">
+<area shape="poly" coords="7,16,500,3,539,422,700,696,5,895"  onclick="myfunction()">	
+</map>
+-->
+
+
+<br><br></body>
+</html>

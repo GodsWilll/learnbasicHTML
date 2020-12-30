@@ -1,0 +1,46 @@
+.btn {
+display:inline-block;
+font-size:30px;
+width:auto;
+height:50px;
+color:black;
+background-color:lightblue;
+border:2px solid red;
+text-align:center;
+}
+
+.btn:hover{
+background-color:black;
+color:white;
+border:2px solid yellow;
+
+}
+
+#change{
+
+}
+
+a:visited, a:link {
+border:none;
+text-decoration:none;
+background-color:lightblue;
+color:black;
+padding:20px;
+text-align:center;
+font-size:auto;
+width:50px;
+height:20px;
+}
+
+a:hover, a:active {
+border:none;
+text-decoration:none;
+background-color:black;
+color:white;
+padding:25px;
+text-align:center;
+font-size:115%;
+width:105%;
+height:20px;
+border:7px solid yellow;
+}
