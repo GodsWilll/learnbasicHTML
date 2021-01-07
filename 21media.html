@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="html,css,media elements, learn,simple">
+<meta name="author" content="Rahul">
+<meta name="description" content="Learn HTML media elements">
+<meta http-equiv="refresh" content="30">
+<title> Learn HTML Media Elements</title>
+</head>
+
+<body>
+
+<h3 style="text-align:center;"> Video Tag</h3>
+<br>
+<button onclick="mylocation()"> Click Me To Get Location  </button>
+<p id="demo"></p>
+<br>
+
+<!--  -->
+
+<button onclick="counter()"> CLick Me to See the count </button>
+<p id="count"></p>
+
+
+
+<br>
+<p id="webstr"> </p>
+
+<br>
+<div style="text-align:center;">
+<button onclick="playPause()">Play/Pause </button>
+<button onclick="big()">Big </button>
+<button onclick="small()">Small </button>
+<button onclick="normal()">Normal </button>
+
+<br>
+<video id="video1" width="450" height="380" controls>
+  	<source src="files/HTML Tutorial in Hindi by TechGUn.mp4" 		type="video/mp4">
+	<source src="files/HTML Tutorial in Hindi by TechGUn.ogg" 		type="videos/ogg">
+Your browser doesnt support Video tag
+</video>
+</div>
+<br><br>
+<div style="text-align:center";>
+
+<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="788.54" height="443" type="text/html" src="https://www.youtube.com/embed/DBXH9jJRaDk?autoplay=1&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=110&end=0&vq=medium&mute=1"></iframe>
+
+
+<!-- Below script doesnt work when placed inside head tag -->
+<script>
+var x=document.getElementById("demo");
+function mylocation() {
+
+if(navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(showPosition);
+} else {
+x.innerHTML="Geolocation is not supported by your browser.Update your browser";
+}
+
+}
+
+function showPosition(position) {
+	x.innerHTML="latitude: " +position.coords.latitude + "longitude: "+ position.coords.longitude;
+}
+
+
+var myVideo = document.getElementById("video1"); 
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+function big() {
+myVideo.width=600;
+}
+function small() {
+myVideo.width=300;
+}
+function normal() {
+myVideo.width=420;
+}
+
+</script>
+
+<script>
+
+if(typeof(Storage) !== "undefined" ) {
+
+	localStorage.setItem("lastname","Mohan");
+	document.getElementById("webstr").innerHTML=localStorage.getItem("lastname");
+	
+} else {
+document.getElementById("webstr").innerHTML="Sorry your browser doesn't supports Web Storage. Please upgrade you browser or use any other modern browser.";
+}
+
+</script>
+
+<script>
+
+function counter(){
+var x=document.getElementById("count");
+
+if(localStorage !== "undefined") {
+
+	if(localStorage.clickcount) {
+	localStorage.clickcount=Number(localStorage.clickcount)+1;
+	} else {
+	localStorage.clickcount=1;
+	}
+	
+	x.innerHTML="You have clicked "+localStorage.clickcount+" 		time(s).";
+	
+} else {
+x.innerHTML="Sorry but your browser doesnt supports localStorage. Please either upgrade your browser or else change you default browser. "
+}
+
+}
+</script>
+
+<br>
+</body>
+</html>
+
+

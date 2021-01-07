@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="keywords" content="HTML,CSS,forms">
+<meta name="description" content="Learn creating form in HTML5">
+<meta http-equiv="refresh" content="50">
+<meta name="author" content="RAhul">
+<link rel="stylesheet" href="20forms.css" type="text/css">
+</head>
+<body>
+
+<h2 class="form"> Form with Text Input</h2>
+<form action="/action_page.php" target="_blank" method="post" enctype="multipart/form-data" autocomplete="on"  > 
+<label for="fname" >First Name</label>
+<br>
+<input type="text" id="fname" name="fname" value="John">
+<br>
+<label for="sname"> Second Name</label>
+<br>
+<input type="text" id="sname" name="sname" value="Kent">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+<br>
+
+<p> If you click the "Submit" button the form data will be sent to 
+"/action_page.php".
+</p>
+</form>
+<h2> Form with Radio Button</h2>
+<form class="form" action="/action_page.php" method="get" autocomplete="on" target="_blank" >
+<input type="radio" id="male" name="gender" value="male">
+<label for="male"> Male </label><br>
+<br>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female"> Female</label><br>
+<br>
+<input type="radio" id="others" name="gender" value="other">
+<label for="others">Others</label>
+<br><br>
+<input type="submit" value="Submit">
+</form>
+
+<p>Notice that the name attributes in radio should be same for
+all radio button of one category </p>
+<br>
+
+<h2 class="form"> Form with CheckBox</h2>
+<form action="/action_page.php"> 
+<input type="checkbox" name="veh1" id="veh1" value="Bike">
+<label for="veh1"> I am Bike</label>
+<br>
+<input type="checkbox" name="veh2" id="veh2" value="Car">
+<label for="veh2" > I am Car</label>
+<br>
+<input type="checkbox" name="veh3" id="veh3" value="Truck">
+<label for="veh3" >I m Truck</label>
+<br><br>
+<input type="submit" value="Submit">
+<p> Notice the name attribute should have sequential names </p>
+</form>
+
+
+<h2 > Form with no "novalidate" attribute.</h2>
+<form action="/action_page.php"  autocomplete="on"  > 
+<label for="email" >Email</label>
+<br>
+<input type="email" id="email" name="email" value="example@email.com">
+<br>
+<input type="submit" value="Submit">
+</form>
+<br>
+<fieldset>
+<legend>Drop Down</legend>
+<p> Form with Dropdown List</p>
+<form action="action.php" name="dropdown" method="post" 
+accept-charset="utf-8" target="_blank" autocomplete="on">
+<label for="cars"> Select you Car:</label>
+<select id="cars" name="cars"  >
+<!-- size and multiple attribute doesnt work good with optgroup tag -->
+<optgroup label="Swedish Cars">
+	<option value="volvo" > Volvo </option>
+	<option value="maruti" > Maruti </option>
+</optgroup>	
+<optgroup label="German Cars">	
+	<option value="bmw" > BMW </option>
+	<option value="audi" selected> Audi </option>
+</optgroup>
+<optgroup label="Koorean Cars">
+	<option value="hyundai" > Hyundai </option>
+	<option value="range" > Range Rover </option>
+</optgroup>
+</select>
+</fieldset>
+<br><br>
+
+<fieldset>
+<legend>Grivance Section</legend>
+<p> Write you Grievances here</p>
+<textarea name="comments" style="width:300px;height:150px;">
+Hello I want to say something...
+</textarea>
+</fieldset>
+<br>
+<button type="button" onclick="alert('Hello!')">CLick Me</button>
+<br>
+<input type="button" onclick="alert('Hello! God')" value="Click Me Too">
+<br>
+<input type="submit" >
+</form>
+<br><br>
+
+
+<p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
+
+<form name="Data List" action="action.php" method="post" enctype="" novalidate autocomplete="on" accept-charset="utf-8" target="_blank" >
+
+<fieldset>
+<legend> DataList with Input</legend>
+<label for="browser">Choose your favourite browser</label>
+<input list="browser">
+<datalist id="browser">
+	<option value="IE 9">
+	<option value="Google Chrome">
+	<option value="Firefox">
+	<option value="Chromium">
+</datalist>
+<br><br>
+<input type="submit" value="Accept">
+</fieldset>
+</form>
+
+
+<form action="action.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)" >
+<fieldset>
+<legend> Adding Numbers by Slider</legend>
+
+0
+<input type="range" id="a" name="a" value="50">
+100 + 
+<input type="number" id="b" name="b" value="50">
+=
+<output name="x" for="a b"></output>
+</fieldset>
+</form>
+
+
+
+
+
+</form>
+
+</body>
+</html>

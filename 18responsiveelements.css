@@ -1,0 +1,43 @@
+*{
+box-sizing:border-box;
+}
+
+h2 {
+text-align:center;
+}
+
+p {
+color:black;
+font-family:'Open Sans', sans-serif;
+font-weight:bold;
+text-align:center;
+}
+
+.left{
+float:left;
+width:20%;
+background-color:#2196F3;
+padding:20px;
+}
+
+.main{
+float:left;
+width:60%;
+background-color:#f1f1f1;
+padding:20px;
+}
+
+
+.right{
+float:left;
+width:20%;
+background-color:#4CAF50;
+padding:20px;
+}
+
+@media screen and (max-width:800px) {
+.left,.main,.right {
+float:none;
+width:100%
+}
+}

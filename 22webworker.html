@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta http-equiv="refresh" content="30">
+<title> Learn Webworker in HTML </title>
+
+
+</head>
+
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button> 
+<button onclick="stopWorker()">Stop Worker</button>
+
+<p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support Web Workers.</p>
+
+<script>
+var w;
+
+function startWorker() {
+  if(typeof(Worker) !== "undefined") {
+    if(typeof(w) == "undefined") {
+      w = new Worker("23demo_worker.js");
+    }
+    w.onmessage = function(event) {
+      document.getElementById("result").innerHTML = event.data;
+    };
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+  }
+}
+
+function stopWorker() { 
+  w.terminate();
+  w = undefined;
+}
+</script>
+
+
+<!--
+
+<body>
+
+<script>
+var w;
+
+function startWorker() {
+if(typeof(Worker) !== "undefined") {
+	if(typeof(w) == "undefined") {
+		w= new Worker("23demo_worker.js");
+	}	
+	
+	w.onmessage= function(event) {
+		document.getElementById("result").innerHTML=event.data;
+	}
+	
+} else {
+ document.getElementById("result").innerHTML="Sorry Web worker not supportted by your browser";
+}
+}
+
+function stopworker() {
+	w.terminate();
+	w=undefined;
+}
+</script>
+
+
+<p> 
+Count Numbers: <output id="result"> </output>
+<p>
+
+<button onclick="startWorker()"> Start Worker </button>
+<button onclick="stopWorker()"> Stop Worker </button>
+
+
+</body>
+
+-->
+</html>
