@@ -1,0 +1,21 @@
+#back {
+background-image:url("files/coffe_with_code.jpg"),url("files/download.jpeg");
+background-repeat:no-repeat;
+background-position:center center,bottom center;
+/*
+background-size:cover;
+background-attachment:fixed;
+background-color:yellow;
+*/
+}
+
+#border {
+	border-style:dashed;
+	height:70%;
+	width:70%;
+/*	min-height:700px;
+	min-width:800px;
+*/	max-width:900px;
+	max-height:1000px;
+
+}
