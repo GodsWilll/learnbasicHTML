@@ -12,6 +12,16 @@ function changeColortoYellow() {
 	document.getElementById("change").style.backgroundColor="yellow";
 }
 
+function changeImage(sw) {
+var pick;
+	if(sw==0){
+	pick="files/download.jpeg" }
+	else {
+	pick= "files/nature.jpeg"
+	}
+	document.getElementById('animal').src=pick;
+}
+
 </script>
 </head>
 <body>
@@ -36,11 +46,18 @@ If you click on the above button then you can change the color from Black to Blu
 <iframe src="7image_maps.html" name="myframe" title="Image Maps inside Frame" 
 style="width:1200px;height:500px"></iframe>
 <br>
-<!-- 
+<!--
 <button class="btn" onclick="window.location.href='5html_links.html';" target="myframe" >Click to See Magic</button>
-
 -->
-<br>
+<br><br>
+
+<div style="text-align:center;">
+<button class="btn" onclick="changeImage(0)"> Turtle </button>
+&nbsp;&nbsp;&nbsp;
+<button class="btn" onclick="changeImage(1)"> Nature </button>
+<br><br>
+<img src="files/image1.png" id="animal" alt="life advice" height="300" width="480">
+</div>
 
 </body>
 </html>
